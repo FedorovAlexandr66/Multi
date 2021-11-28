@@ -14,4 +14,20 @@
 Смотря на скрины обработки при разном количестве воркеров мы делаем вывод, чем больше воркеров тем быстрее обрабатываются ссылкки, но тем сильнее нагружается процессов, оперативная память и нагрузка на сеть растёт 
 ![image](https://user-images.githubusercontent.com/81014175/143782730-08b59b2b-f76c-4bc6-a156-3f2c181a69f4.png) 
 CPU-bound. Генерируем монетки 
-На одном ядре генерации монеты заняла 117 cекунд
+На одном ядре генерации монеты заняла 117 cекунд 
+Время генерации монеты при использовании ProcessPoolExecutor при 2 воркерах 
+![image](https://user-images.githubusercontent.com/81014175/143782873-107763fe-7f1c-44eb-be00-11566c8e30f1.png) 
+![image](https://user-images.githubusercontent.com/81014175/143782880-e784e4f0-35ee-4a02-aefc-6b34993e5a70.png) 
+Время генерации монеты при использовании ProcessPoolExecutor при 4 воркерах 
+![image](https://user-images.githubusercontent.com/81014175/143782890-162eb84c-c4ea-4356-aea1-194fa66a2b4d.png) 
+![image](https://user-images.githubusercontent.com/81014175/143782935-365498bf-332c-4f7b-abb1-d027e475e34b.png) 
+Время генерации монеты при использовании ProcessPoolExecutor при 5 воркерах 
+![image](https://user-images.githubusercontent.com/81014175/143782952-098b9b27-2612-4298-b5d9-bb60c0de1b7d.png) 
+![image](https://user-images.githubusercontent.com/81014175/143782973-07fd6e41-fbf4-4df4-91b7-39a4a3ae02c2.png) 
+Время генерации монеты при использовании ProcessPoolExecutor при 10 воркерах 
+![image](https://user-images.githubusercontent.com/81014175/143782982-f35bdfd8-9b46-440c-b61d-ee53c1819312.png) 
+![image](https://user-images.githubusercontent.com/81014175/143783010-ef78be9a-dc1a-4fb2-86be-04915e5bb18d.png) 
+Время генерации монеты при использовании ProcessPoolExecutor при 100 воркерах 
+![image](https://user-images.githubusercontent.com/81014175/143783031-efb8b165-e2d8-4eeb-9848-d431d7981639.png) 
+![image](https://user-images.githubusercontent.com/81014175/143783041-40481084-fba6-40aa-a452-cda2e0ce3d4a.png) 
+При использовании ProcessPoolExecutor основываясь на скринах, можно увидеть что время генерации одного токена никак не зависит от количества воркеров, а также не увеличивается нагрузка на процессор, оперативную память и на сеть 
